@@ -1,9 +1,13 @@
-module.exports = {
-    mongoUri: 'mongodb+srv://santacluster.y2mxq.mongodb.net',
+require('dotenv').config();
+
+  module.exports = {
+    isVercel: process.env.IS_VERCEL || false,
+    port: process.env.PORT || 7000,
+    mongoUri: process.env.MONGO_URI,
     mongoOptions: {
-      user: 'santa',
-      pass: 'santa',
-      dbName: 'santa',
+      user: process.env.MONGO_USER,
+      pass: process.env.MONGO_PASSWORD,
+      dbName: process.env.MONGO_DATABASE,
       retryWrites: true,
       w: 'majority',
     },
