@@ -8,8 +8,6 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const morgan =require('morgan');
 
-const PORT = process.env.PORT || 7000;
-
 
 const config = require('../src/config');
 // เอาไว้เก็บข้อมูลต่างๆๆ
@@ -51,7 +49,7 @@ app.use('/users',userRouter)
 //เรียกใช้งาน route login
 // วิธี ที่1
 app.use('/api',require('../src/routes/api'));
-app.get("/", (res, req) => {res.send("Hello World")});
+app.get("/", (req, res) =>  res.send("Hello World"));
 
 //วิธีที่2
 // readdirSync('./routes').map((r)=>console.log(r));
