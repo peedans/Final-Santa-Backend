@@ -47,7 +47,7 @@ app.use('/users',userRouter)
 //เรียกใช้งาน route login
 // วิธี ที่1
 app.use('/api',require('../src/routes/api'));
-
+app.get("/", (res, req) => {res.send("Hello World")});
 
 //วิธีที่2
 // readdirSync('./routes').map((r)=>console.log(r));
