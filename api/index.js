@@ -7,6 +7,10 @@ const mongoose = require('mongoose');
 // จัดการเกี่ยว กับ api
 const cors = require('cors');
 const morgan =require('morgan');
+
+const PORT = process.env.PORT || 7000;
+
+
 const config = require('../src/config');
 // เอาไว้เก็บข้อมูลต่างๆๆ
 
