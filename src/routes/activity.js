@@ -86,29 +86,7 @@ router.put('/:activityDataId', async (req, res, next) => {
   return res.status(200).send("อัพเดทข้อมูลสำเร็จ");
 });
 
-// router.put('/:id',async (req, res, next)=>{
-//   const foundedId = req.params.activityDataId;
-//   const body = req.body;
-//   await ActivityModel.findOneAndUpdate({_id:foundedId,body})
-//   console.log(ActivityModel)
-//   .then(()=>{
-//       res.status(201).send('update success')
-//   })
-//   .catch((err)=>{
-//           const errorFieldNames = Object.keys(err.errors);
-//           if (errorFieldNames.length >0 ){
-//               return res.status(400).send(err.errors[errorFieldNames[0]].message);
-//           }
-//   })
 
-// })
-
-
-
-// router.delete('/:activityDataId', async (req, res, next) => {
-//   await ActivityModel.deleteOne({ _id: req.params.activityDataId });
-//   return res.status(204).send(); // 204 = No content which mean it successfully removed
-// })
 router.delete('/:activityDataId', async (req, res) => {
   try {
     const id = req.params.activityDataId;
