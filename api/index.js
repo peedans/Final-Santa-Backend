@@ -7,9 +7,9 @@ const mongoose = require('mongoose');
 // จัดการเกี่ยว กับ api
 const cors = require('cors');
 const morgan =require('morgan');
-const config = require('./config');
+const config = require('../src/config');
 // เอาไว้เก็บข้อมูลต่างๆๆ
-require('dotenv').config();
+
 // คือการอ่าน Directory ใน Folder routes อัตโนมัติ
 const { readdirSync } = require('fs');
 const userRouter=require('../src/routes/user');
